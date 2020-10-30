@@ -18,14 +18,6 @@ namespace IndianCensus
         public double waterArea;
         public double landArea;
 
-        public CensusDTO(StateCodeDataDAO stateCodeDataDAO)
-        {
-            this.serialNumber = stateCodeDataDAO.serialNumber;
-            this.stateName = stateCodeDataDAO.stateName;
-            this.tin = stateCodeDataDAO.tin;
-            this.stateCode = stateCodeDataDAO.stateCode;
-        }
-
         public CensusDTO(CensusDataCodeDAO censusDataDAO)
         {
             this.state = censusDataDAO.state;
@@ -33,5 +25,13 @@ namespace IndianCensus
             this.area = censusDataDAO.area;
             this.density = censusDataDAO.density;
         }
+        public CensusDTO(StateCodeDataDAOcs stateCodeDataDAO)
+        {
+            this.serialNumber = stateCodeDataDAO.serialNumber;
+            this.stateName = stateCodeDataDAO.stateName;
+            this.tin = stateCodeDataDAO.tin;
+            this.stateCode = stateCodeDataDAO.stateCode;
+        }
+
     }
 }

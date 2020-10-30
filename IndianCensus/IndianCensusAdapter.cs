@@ -21,7 +21,7 @@ namespace IndianCensus
                 }
                 string[] coloumn = data.Split(",");
                 if (csvFilePath.Contains("IndiaStateCode.csv"))
-                    datamap.Add(coloumn[1], new CensusDTO(new StateCodeDataDAO(coloumn[0], coloumn[1], coloumn[2], coloumn[3])));
+                    datamap.Add(coloumn[1], new CensusDTO(new StateCodeDataDAOcs(coloumn[0], coloumn[1], coloumn[2], coloumn[3])));
                 if (csvFilePath.Contains("IndiaStateCensusData.csv"))
                     datamap.Add(coloumn[1], new CensusDTO(new CensusDataCodeDAO(coloumn[0], coloumn[1], coloumn[2], coloumn[3])));
             }
